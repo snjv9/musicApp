@@ -5,7 +5,7 @@ import { DataService } from '../data.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: []
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
 
@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.dataService.getToken().subscribe(data=>{
       console.log(data);
-      //this.movies = data.results;
+      this.movies = data.results;
 
     })
   }
