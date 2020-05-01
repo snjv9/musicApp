@@ -2,6 +2,16 @@
 
 
 <section id="back">
+    <form class="navbar-form">
+        <div class="input-group">
+            <input #search type="text" class="form-control" placeholder="searching">
+                <div class="input-group-btn">
+                    <button (click)="movieSearch(search.value)" class="btn btn-default" type="submit">
+                    <i class="fa fa-search"></i>
+                    </button>
+                </div>
+        </div>
+    </form>
     <div *ngFor = "let movie of movies">
         <div class="container" >
            <div class="feature-content">

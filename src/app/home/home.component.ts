@@ -7,20 +7,27 @@ import { DataService } from '../data.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent  {
 
+  
   public movies = [];
   public movie: any;
-  constructor(private dataService:DataService) { }
+
+  constructor(private _movieService: DataService, private router: Router) {}
+
 
   ngOnInit() {
-    this.dataService.getToken().subscribe(data=>{
-      console.log(data);
-      this.movies = data.results;
-
-    })
+      this._movieService.getToken().subscribe(data => {
+        console.log(data);
+        this.movies = data.results;
+      });
+      
   }
-
-
-
+  
+  movieSearch(searching:String) {
+  this.router.navigate(['/search',searching]);
+  }
+  display(){
+    console.log("Done")
+  }
 }
