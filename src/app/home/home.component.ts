@@ -24,10 +24,6 @@ export class HomeComponent  {
       
   }
   
-  movieSearch(searching:String) {
-  this.router.navigate(['/search',searching]);
-  }
-  display(){
-    console.log("Done")
-  }
+  
+  
 }
