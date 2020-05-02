@@ -7,7 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: []
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'musicApp';
@@ -18,13 +18,7 @@ export class AppComponent {
   constructor(private _movieService: DataService, private router: Router) {}
 
 
-  ngOnInit() {
-      this._movieService.getToken().subscribe(data => {
-        console.log(data);
-        this.movies = data.results;
-      });
-      
-  }
+  
   
   movieSearch(searching:String) {
   this.router.navigate(['/search',searching]);

@@ -1,34 +1,35 @@
-<div *ngFor = "let movie of movies">
-    <div class="container" >
-       <div class="feature-content">
-            <div class="row">
-                <div class="col-lg-6 ">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" class="card-img-top" alt="..." class="img-thumbnail">
-                        <!--<div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>-->
-                      </div>
-                      <blockquote >Rating : {{movie.vote_average}} <i class="fas fa-heart"></i></blockquote> 
 
 
-                </div>       
-                <div class="col-lg-6 my-auto">
-                    <h6 class="">{{movie.title}}</h6> 
-                    <h3 class="display-5">Synopsis:</h3><hr>
-                    <p>{{movie.overview}}</p><hr>
-                    <button id="btn1">Add To Favorites</button>
+<div  *ngIf="movies.length>0; else elseBlock">
+    <div id="back" *ngFor = "let movie of movies">
+        <div class="container" >
+                <div class="feature-content">
+                    <div class="row">
+                        <div class="col-lg-6 ">
+                            <div class="card" style="width: 18rem;">
+                                <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" class="card-img-top" alt="..." class="img-thumbnail">
+                                
+                            </div>
+                            <blockquote>Rating : {{movie.vote_average}}<i class="fa fa-heart"></i> </blockquote> 
 
 
-                
-                </div>    
-            </div>
-        
-        </div>    
-        <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-
+                        </div>       
+                        <div class="col-lg-6 my-auto">
+                        <h6 class="">{{movie.title}}</h6> 
+                        <h3 class="display-5">Synopsis:</h3><hr>
+                        <p>{{movie.overview}}</p><hr>
+                        <button id="btn1">Add To Favorites</button>
+                    </div>    
+                </div>
+            </div>    
+            <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+        </div>
     </div>
-    
+
 </div>
+<ng-template #elseBlock>
+    <div id="not-found">
+        <h1>Ooops!.....Please Enter Valid Name</h1>
+    </div>
+</ng-template>
+

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: aliceblue;" >  <!--navbar fixed at the top-->
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Movies Hub</a> <!-- image was shrinked to fit properly in navbar-->                              
+        <a class="navbar-brand" href="">Movies Hub</a>  <!-- image was shrinked to fit properly in navbar-->                              
         <!--button for responsivness-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#startupNavbar" aria-controls="startupNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -8,16 +8,15 @@
         <div class="collapse navbar-collapse" id="startupNavbar">  <!--this [id] is used for internal linking in data target-->
             <ul class="navbar-nav ml-auto">             <!--ml-auto shifts the contents to the right-->
                 <li class="nav-item active">              <!--active represents the default loading page-->
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> <!--As a convention span with a class sr-only is added for screen readers and this will not be displayed normally-->
+                    <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a> <!--As a convention span with a class sr-only is added for screen readers and this will not be displayed normally-->
                 </li>
-              
                 <li>
                     <form class="navbar-form">
                         <div class="input-group">
-                            <input #search type="text" class="form-control" placeholder="searching">
+                            <input #search type="text" class="form-control" placeholder="Search">
                                 <div class="input-group-btn">
                                     <button (click)="movieSearch(search.value)" class="btn btn-default" type="submit">
-                                    <i class="fa fa-search"></i>
+                                    <i class="fa fa-search"> </i>
                                     </button>
                                 </div>
                         </div>
