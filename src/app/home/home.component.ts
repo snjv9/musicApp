@@ -14,7 +14,7 @@ export class HomeComponent  {
   public movie: any;
 
   constructor(private _movieService: DataService, private router: Router) {}
-
+  
 
   ngOnInit() {
       this._movieService.getToken().subscribe(data => {
@@ -24,6 +24,8 @@ export class HomeComponent  {
       
   }
   
-  
+  onSubmit1(movie: any) {
+    return this._movieService.moviefav(movie).subscribe();
+  }
   
 }

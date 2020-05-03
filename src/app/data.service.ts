@@ -14,15 +14,26 @@ export class DataService {
     throw new Error("Method not implemented.");
   }
   url :any;
+  value:any;
   getToken(): Observable<any>{
-    console.log("Inside get Token");
+    
     return this.http.get('https://api.themoviedb.org/3/movie/top_rated?api_key=c8d03dd80917dd0e75ca5ff67f379f6a&language=en-US&page=1')
   }
 
   getSearch(url: string): Observable<any> {
-    console.log("calling");
     return this.http.get<any>(url);
   
   }
-  
+  fetchDetails(value):Observable<any>{
+     {
+      this.url = 'https://api.themoviedb.org/3/movie/' + value.substring(1,) + '?api_key=c8d03dd80917dd0e75ca5ff67f379f6a&language=en-US';
+      return this.http.get<any>(this.url);
+    }
+  }
+
+  moviefav(movie): Observable<any> {
+    console.log("hit");
+    return this.http.post<any>('......', movie);
+  }
+
 }

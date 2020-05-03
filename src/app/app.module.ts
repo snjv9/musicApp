@@ -7,7 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import {HttpClientModule} from '@angular/common/http';
 import { SecondPageComponent } from './second-page/second-page.component';
-import { SearchComponent } from './search/search.component'
+import { SearchComponent } from './search/search.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component'
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SearchComponent } from './search/search.component'
     HomeComponent,
     LoginComponent,
     SecondPageComponent,
-    SearchComponent
+    SearchComponent,
+    MovieDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,25 @@
+
+<div id="back">
+  <div class="container" >
+    <div class="feature-content">
+      <div class="row">
+        <div class="col-lg-6 ">
+          <div class="card" style="width: 18rem;">
+            <a href="details/:{{movie.id}}"><img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" class="card-img-top" alt="..." class="img-thumbnail"></a>  
+          </div>
+          <h6 id="ind">Popularity: {{movie.popularity}}</h6>
+          <blockquote >Rating : {{movie.vote_average}} <i class="fa fa-heart" aria-hidden="true"></i></blockquote>
+
+
+        </div>       
+        <div class="col-lg-6 my-auto">
+          <h6 class="">{{movie.title}}</h6> 
+          <h3 class="display-5">Synopsis:</h3><hr>
+          <p>{{movie.overview}}</p><hr>
+
+          <button id="btn1">Add To Favorites</button>
+        </div>
+      </div>
+    </div>    
+  </div>
+</div>
