@@ -23,7 +23,9 @@ export class AppComponent {
   movieSearch(searching:String) {
   this.router.navigate(['/search',searching]);
   }
-  
+  onSubmit2(){
+    this.router.navigate(['/favorites']);
+  }
 
   }
 

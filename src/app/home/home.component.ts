@@ -27,5 +27,8 @@ export class HomeComponent  {
   onSubmit1(movie: any) {
     return this._movieService.moviefav(movie).subscribe();
   }
+
+  
+
   
 }

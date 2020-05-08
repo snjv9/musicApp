@@ -8,7 +8,8 @@ import { LoginComponent } from './login/login.component';
 import {HttpClientModule} from '@angular/common/http';
 import { SecondPageComponent } from './second-page/second-page.component';
 import { SearchComponent } from './search/search.component';
-import { MovieDetailsComponent } from './movie-details/movie-details.component'
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { FavoritesComponent } from './favorites/favorites.component'
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component'
     LoginComponent,
     SecondPageComponent,
     SearchComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    FavoritesComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,8 @@ import { LoginComponent } from './login/login.component';
 import { SecondPageComponent } from './second-page/second-page.component';
 import { SearchComponent } from './search/search.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import {FavoritesComponent} from './favorites/favorites.component'
+import { from } from 'rxjs';
 
 
 const routes: Routes = [
@@ -12,6 +14,7 @@ const routes: Routes = [
   {path:'search/:searching',component:SearchComponent},
   {path:'login',component:LoginComponent},
   {path:'second-page',component:SecondPageComponent},
+  {path:'favorites',component:FavoritesComponent},
   {path:'',component:HomeComponent}
 ];
 
@@ -21,4 +24,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const routingComponent = [HomeComponent,LoginComponent,SearchComponent,
-                                SecondPageComponent,MovieDetailsComponent];
+                                SecondPageComponent,MovieDetailsComponent,FavoritesComponent];
