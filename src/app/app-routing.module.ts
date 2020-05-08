@@ -8,7 +8,7 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import {FavoritesComponent} from './favorites/favorites.component'
 import { from } from 'rxjs';
 
-
+//These are the defined routes
 const routes: Routes = [
   {path:'details/:id',component:MovieDetailsComponent},
   {path:'search/:searching',component:SearchComponent},

@@ -13,6 +13,9 @@ export class MovieDetailsComponent implements OnInit {
 
   constructor(private showService:DataService,private router:ActivatedRoute) { }
 
+  //As this component was called with an argument 
+  //this function is telling to subscribe to recieve data with argument named id
+  //fetchDetails fuction is called
   ngOnInit() {
     this.router.params.subscribe(params =>
       this.movie = params['id']);

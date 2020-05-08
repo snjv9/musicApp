@@ -10,7 +10,9 @@ export class FavoritesComponent implements OnInit {
 
   movies:[];
   constructor(private favService : DataService) { }
-
+  
+  //This component was called when clicked on onSubmit2 in app component
+  //As this component is loaded getfav function is called inside favService which is an instance of data service.
   ngOnInit() {
     this.favService.getfav()
     .subscribe(data =>{
@@ -18,10 +20,12 @@ export class FavoritesComponent implements OnInit {
       this.movies = data;
     })
   }
+
+
   removefav( id: number )
   {
     this.favService.delMov(id).subscribe();
-      window.location.reload();
+      window.location.reload();  //live reloading has been enabled on deleting
 
     }
 }

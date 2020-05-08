@@ -15,7 +15,9 @@
           <h6 class="">{{movie.title}}</h6> 
           <h3 class="display-5">Synopsis:</h3><hr>
           <p>{{movie.overview}}</p><hr>
+          <!--onSubmit1 function is called with one parameter as input for adding as favorite-->
           <button id="btn1"> <a (click)="onSubmit1(movie)"> Add To Favorites </a> </button>
+          <!--Movie-Details component is called with an argument movie.id -->
           <button id="btn1"> <a href="details/:{{movie.id}}">View Details </a></button> 
           
         </div>

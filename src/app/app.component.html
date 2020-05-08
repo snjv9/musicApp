@@ -1,6 +1,8 @@
+<!--Following html is loaded -->
+
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: aliceblue;" >  <!--navbar fixed at the top-->
     <div class="container-fluid">
-        <a class="navbar-brand" href="">Movies Hub</a>  <!-- image was shrinked to fit properly in navbar-->                              
+        <a class="navbar-brand" href="">Movies Hub</a>                              
         <!--button for responsivness-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#startupNavbar" aria-controls="startupNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -15,6 +17,7 @@
                         <div class="input-group">
                             <input #search type="text" class="form-control" placeholder="Search movies/TV-series">
                                 <div class="input-group-btn">
+                                    <!--movieSearch function is called with one parameter-->
                                     <button (click)="movieSearch(search.value)" class="btn btn-default" type="submit">
                                     <i class="fa fa-search"> </i>
                                     </button>
@@ -24,15 +27,17 @@
                 </li>
                 
                 <li class="nav-item">
+                    <!--Login component is loaded on this link-->
                     <a class="btn btn-outline-primary " href="/login">Sign In</a>
                 </li>
                 <li class="nav-item">
+                    <!--onSubmit2 function gets called-->
                     <button (click)="onSubmit2()" class="btn btn-sm-secndary">Favorites</button>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-
+<!--This tag tells angular to load the component with no defined path after this-->
 <router-outlet></router-outlet>
 
