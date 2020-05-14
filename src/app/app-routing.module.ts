@@ -7,6 +7,8 @@ import { SearchComponent } from './search/search.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import {FavoritesComponent} from './favorites/favorites.component'
 import { from } from 'rxjs';
+import { AuthGuard } from './_helpers';
+import { Role } from './_models';
 
 //These are the defined routes
 const routes: Routes = [
@@ -15,7 +17,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'second-page',component:SecondPageComponent},
   {path:'favorites',component:FavoritesComponent},
-  {path:'',component:HomeComponent}
+  {path:'',component:HomeComponent,canActivate:[AuthGuard]}
 ];
 
 @NgModule({
@@ -25,3 +27,4 @@ const routes: Routes = [
 export class AppRoutingModule { }
 export const routingComponent = [HomeComponent,LoginComponent,SearchComponent,
                                 SecondPageComponent,MovieDetailsComponent,FavoritesComponent];
+export const appRoutingModule = RouterModule.forRoot(routes);
